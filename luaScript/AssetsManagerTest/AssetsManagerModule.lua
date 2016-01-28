@@ -18,7 +18,7 @@ function AssetManagerModule.newScene(backfunc)
     cc.MenuItemFont:setFontName("Arial")
     cc.MenuItemFont:setFontSize(24)
     local backMenuItem = cc.MenuItemFont:create("Back")
-    backMenuItem:setPosition(cc.p(VisibleRect:rightBottom().x - 50, VisibleRect:rightBottom().y + 25))
+    backMenuItem:setPosition(cc.p(100, 100))
     backMenuItem:registerScriptTapHandler(backToUpdate)
 
     local backMenu = cc.Menu:create()
