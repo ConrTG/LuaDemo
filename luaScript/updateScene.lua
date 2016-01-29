@@ -44,14 +44,16 @@ local function main()
         local visibleSize = cc.Director:getInstance():getVisibleSize()
 
         -- 使用plist載入圖片資源.
-        -- local frameCache = cc.SpriteFrameCache:getInstance()
-        -- frameCache:addSpriteFrames("StartScene.plist");
+        local frameCache = cc.SpriteFrameCache:getInstance()
+        frameCache:addSpriteFrames("StartScene.plist");
         
         local sprite=cc.Sprite:createWithSpriteFrameName("ddwm00040001.png")
         sprite:setPosition(origin.x + visibleSize.width / 2, origin.y + visibleSize.height / 2)
         baseLayer:addChild(sprite)
         
-        
+        local function menuCallbackOpenPopup()
+            print("MenuCallBack")
+        end
         
         -- 建立 Menu.
         local menuToolsItem = cc.MenuItemImage:create("menu1.png", "menu1.png")
