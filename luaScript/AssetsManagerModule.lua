@@ -14,8 +14,8 @@ function AssetManagerModule.newScene(backfunc)
         end
     end
 
-    Create BackMneu
-    cc.MenuItemFont:setFontName("arial")
+    --Create BackMneu
+    cc.MenuItemFont:setFontName("Arial")
     cc.MenuItemFont:setFontSize(24)
     local backMenuItem = cc.MenuItemFont:create("Back")
     backMenuItem:setPosition(cc.p(900, 100))
@@ -26,7 +26,7 @@ function AssetManagerModule.newScene(backfunc)
     backMenu:addChild(backMenuItem)
     layer:addChild(backMenu,6)
 
-    local helloLabel =  cc.Label:createWithTTF("Hello World", s_arialPath, 38)
+    local helloLabel =  cc.Label:createWithTTF("Hello World", "fonts/arial.ttf", 38)
     helloLabel:setAnchorPoint(cc.p(0.5, 0.5))
     helloLabel:setPosition(cc.p(winSize.width / 2, winSize.height - 40))
     layer:addChild(helloLabel, 5)
